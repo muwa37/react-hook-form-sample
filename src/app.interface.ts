@@ -7,5 +7,10 @@ export interface Address {
 export interface ShippingFields {
   email: string;
   name: string;
-  adress: Address;
+  address: Address;
+}
+
+export interface Option {
+  value: string;
+  label: string;
 }

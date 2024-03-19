@@ -1,20 +1,11 @@
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { ShippingFields } from './app.interface';
+import { FC } from 'react';
+import { ShippingForm } from './ShippingForm';
 
-function App() {
-  const { register, handleSubmit } = useForm<ShippingFields>();
-
-  const onSubmitHandler: SubmitHandler<ShippingFields> = data => {
-    alert('');
-  };
+export const App: FC = () => {
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <input {...register('name')} type='text' />
-        <button>send</button>
-      </form>
+      <h1>React hook form sample</h1>
+      <ShippingForm />
     </div>
   );
-}
-
-export default App;
+};
